@@ -22,9 +22,10 @@
     background-position: center;
     border: 2px solid #080884;
     transition: all 400ms ease;
+    border-radius: 5px;
 }
 .front{
-    background-image: url(../imagens/aipom.png);
+    
     transform: rotateY(180deg);
     
    
