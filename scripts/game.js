@@ -33,7 +33,7 @@ const createCard = (character) => {
     return card
 }
 
-const loadGame = () =>{
+const loadGame = () => {
     characters.forEach((character) =>{
         const card = createCard(character)
         grid.appendChild(card)
