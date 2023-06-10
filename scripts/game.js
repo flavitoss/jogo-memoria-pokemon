@@ -39,3 +39,7 @@ const loadGame = () => {
         grid.appendChild(card)
     })
 }
+
+window.onload = () => {
+    loadGame();
+}
