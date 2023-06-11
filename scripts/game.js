@@ -1,5 +1,9 @@
 const grid = document.querySelector('.grid')
 
+const spanPlayer = document.querySelector('.player')
+
+const timer = document.querySelector('.time')
+
 const characters = [
     'aipom',
     'dragonyte',
@@ -27,7 +31,7 @@ const checkEndGame = () =>{
     const disabledCards = document.querySelectorAll('.disable-card')
 
     if(disabledCards.lenght === 20){
-        alert('parabéns, você venceu!')
+        window.location.href = './pages/venceu.html'
     }
 }
 
@@ -110,7 +114,19 @@ const loadGame = () => {
         grid.appendChild(card)
     })
 }
+    const startTimer = () => {
+
+        this.loop = setInterval(() =>{
+            const currentTime = +timer.innerHTML 
+            timer.innerHTML = currentTime + 1
+
+        }, 1000)
+    }
 
 window.onload = () => {
+    const playerName = localStorage.getItem('player')
+
+    spanPlayer.innerHTML = playerName
+    startTimer()
     loadGame();
 }
